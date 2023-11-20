@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>My Page Title</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+  <!-- HTML Favicon (Little icon by the window tab should be a basketball). -->
+  <link rel="icon" type="image/x-icon" href="https://github.com/an-m1/counterWebsite/blob/main/basketball.png?raw=true">
+
+  <!-- Following div element is for our Responsive Navbar -->
+ <!-- Load an icon library to show a hamburger menu (bars) on small screens, as well as many other icons used in navbar -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <div class="topnav" id="myTopnav">
+   <a href="#home" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+   <a href="#news"><i class="fa fa-fw fa-search"></i> News</a>
+   <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+   <a href="#about"><i class="fa fa-fw fa-user"></i> About</a>
+   <a href="javascript:void(0);" class="icon" onclick="navShrink()">
+     <i class="fa fa-bars"></i>
+   </a>
+ </div> 
+
+ 
+
+
+
+  <!-- linking html file to styles.css -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
+
+  <!-- linking html file to script.js -->
+<script src="script.js"></script>
 
 </body>
 </html> 
