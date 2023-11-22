@@ -53,4 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar.classList.remove("navbar-hidden");
     changeButtonColor();
   };
+
+  button.onclick = function () {
+    changeButtonColor();
+    if (Number(button.innerHTML) < 999999999) {
+      button.innerHTML = Number(button.innerHTML) + 1;
+    }
+  };
 });
