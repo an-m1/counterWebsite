@@ -1,20 +1,62 @@
+/* For main button */
+.main_button {
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Position the top edge of the button at the middle of the screen */
+  left: 50%; /* Position the left edge of the button at the middle of the screen */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Shift the button back by half its own width and height to center it */
+  width: 50vw; /* Set width relative to the viewport width */
+  height: 50vw; /* Set height equal to width for a circular shape */
+  border-radius: 50%; /* Make the corners fully rounded */
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(19, 152, 19);
+  border: none;
+  box-shadow: 0 9px #999;
+  font-size: 50px; /* Adjust font size as needed */
+  display: flex; /* Enable Flexbox */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  transition: transform 0.2s; /* Animation for smooth scaling */
+  z-index: 999; /* A high value to ensure it's above other elements, but not infront of navbar (navbar zindex is 1000) */
+}
+
+.main_button:hover {
+  transform: translate(-50%, -50%) scale(1.5); /* Combine scaling with centering translation */
+}
+
+.main_button:active {
+  box-shadow: 0 5px #666;
+  transform: translate(-50%, -50%) translateY(4px); /* Maintain centering and add translateY for active state */
+}
+
+/* For +/- buttons */
 .button {
-    padding: 15px 25px;
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #04AA6D;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .button:hover {background-color: #3e8e41}
-  
-  .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 9px #999;
+  /* margin-left: 50%; */
+  margin-top: 10%;
+  /* margin-inline-start: 50%; */
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
