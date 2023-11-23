@@ -1,7 +1,7 @@
 /* For main button */
 .main_button {
   position: absolute; /* Use absolute positioning */
-  top: 50%; /* Position the top edge of the button at the middle of the screen */
+  top: 400%; /* Position the top edge of the button at the middle of the screen */
   left: 50%; /* Position the left edge of the button at the middle of the screen */
   transform: translate(
     -50%,

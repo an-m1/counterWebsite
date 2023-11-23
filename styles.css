@@ -1,15 +1,49 @@
 /* Gradiant colour background */
 body {
-  height: 3000px;
-  /* Used to enable scrolling */
-  /* background: linear-gradient(55deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%); */
-  background-color: #4158d0;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
+  position: relative;
+  height: 3000px; /* Used to enable scrolling */
+  transition: background-color 0.5s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.content-wrapper {
+  position: relative;
+  z-index: 1; /* Ensures content is above the pseudo-elements */
+  /* Add any additional styles needed for your content layout */
+}
+
+body::before, body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+
+  transition: opacity 0.5s ease;
+}
+
+body::before {
+    background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+    opacity: 1;
+}
+
+body::after {
+    background-image: linear-gradient(358.4deg,  rgba(249,151,119,1) -2.1%, rgba(98,58,162,1) 90% ); /* Dark mode gradient */
+    opacity: 0;
+}
+
+body.dark-mode::before {
+    opacity: 0;
+}
+
+body.dark-mode::after {
+    opacity: 1;
 }
 
 /* Add a black background color to the top navigation */
