@@ -1,0 +1,101 @@
+/* The switch - the box around the slider */
+.switch {
+  top: 5px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2f0260;
+}
+
+/* button outline */
+input:focus + .slider {
+  box-shadow: 0 0 1px #666;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  /* background-color: yellow; */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* for moon icon */
+.gg-moon,
+.gg-moon::after {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.gg-moon {
+  position: absolute;
+  top: 50%;
+  left: 7px; /* Adjust this value to center the icon in the white circle */
+  transform: translateY(-50%) rotate(-135deg) scale(var(--ggs, 1));
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-bottom-color: transparent;
+  transition: left 0.4s; /* Transition for smooth movement */
+}
+
+.gg-moon::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 18px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  top: 8px;
+  left: 2px;
+}
+
+input:checked + .slider .gg-moon {
+  left: 33px; /* Adjust this value to move the icon to the center of the white circle when toggled */
+  color: orange;
+  /* background-color: yellow; */
+}

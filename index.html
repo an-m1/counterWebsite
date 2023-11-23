@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter</title>
-  <!-- HTML Favicon (Little icon by the window tab should be a basketball). -->
-  <link rel="icon" type="image/x-icon" href="https://github.com/an-m1/counterWebsite/blob/main/basketball.png?raw=true">
+    <!-- HTML Favicon (Little icon by the window tab should be a basketball). -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://github.com/an-m1/counterWebsite/blob/main/basketball.png?raw=true"
+    />
 
-  <!-- Following div element is for our Responsive Navbar -->
- <!-- Load an icon library to show a hamburger menu (bars) on small screens, as well as many other icons used in navbar -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Following div element is for our Responsive Navbar -->
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens, as well as many other icons used in navbar -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
- <div class="topnav" id="myTopnav">
-   <a href="#home" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
-   <a href="#news"><i class="fa fa-fw fa-search"></i> News</a>
-   <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-   <a href="#about"><i class="fa fa-fw fa-user"></i> About</a>
-   <a href="javascript:void(0);" class="icon" onclick="navShrink()">
-     <i class="fa fa-bars"></i>
-   </a>
- </div> 
+    <!-- for the darkmode moon icon -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/moon.css"
+    />
 
-  <!-- linking html file to styles.css -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- linking html file to styles.css -->
-  <link rel="stylesheet" href="button.css">
-</head>
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#news"><i class="fa fa-fw fa-search"></i> News</a>
+      <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#about"><i class="fa fa-fw fa-user"></i> About</a>
 
-<body>
+      <!-- Rounded switch -->
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round">
+          <i class="gg-moon"></i>
+        </span>
+      </label>
+      <!-- hamburger button implemenation -->
+      <a href="javascript:void(0);" class="icon" onclick="navShrink()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
-<h1>Counter</h1>
-<p>Keep a tally for whatever you'd like!</p>
+    <!-- linking html file to styles.css -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- linking html file to styles.css -->
+    <link rel="stylesheet" href="button.css" />
+    <!-- linking html file to darkmode.css -->
+    <link rel="stylesheet" href="darkmode.css" />
+  </head>
 
-<!-- Main Button -->
-<button id="dynamicColorButton"class="main_button">0</button>
-<!-- <div>
+  <body>
+    <h1>Counter</h1>
+    <p>Keep a tally for whatever you'd like!</p>
+
+    <!-- Main Button -->
+    <button id="dynamicColorButton" class="main_button">0</button>
+    <!-- <div>
   <button id = minus class="button">-</button>
   <button class="button">+</button>
 </div> -->
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-  <!-- linking html file to script.js -->
-<script src="script.js"></script>
-
-</body>
-</html> 
+    <!-- linking html file to script.js -->
+    <script src="script.js"></script>
+    <!-- linking html file to darkmode.js -->
+    <script src="darkmode.js"></script>
+  </body>
+</html>
