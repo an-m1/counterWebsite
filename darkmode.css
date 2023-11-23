@@ -96,6 +96,6 @@ input:checked + .slider:before {
 
 input:checked + .slider .gg-moon {
   left: 33px; /* Adjust this value to move the icon to the center of the white circle when toggled */
-  color: orange;
+  color:  #FFC300 ;
   /* background-color: yellow; */
 }

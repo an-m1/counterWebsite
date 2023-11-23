@@ -8,6 +8,9 @@ function navShrink() {
   }
 }
 
+// to turn on and off the overlay effect
+
+
 //For the main button. Includes the colour change on hover and the value incrementation
 document.addEventListener("DOMContentLoaded", function () {
   var button = document.getElementById("dynamicColorButton");
@@ -83,3 +86,4 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
