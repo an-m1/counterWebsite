@@ -8,9 +8,6 @@ function navShrink() {
   }
 }
 
-// to turn on and off the overlay effect
-
-
 //For the main button. Includes the colour change on hover and the value incrementation
 document.addEventListener("DOMContentLoaded", function () {
   var button = document.getElementById("dynamicColorButton");
@@ -50,16 +47,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   button.onmouseover = function () {
     navbar.classList.add("navbar-hidden");
+    if (isRandom){
     changeButtonColor();
+  }
   };
 
   button.onmouseleave = function () {
     navbar.classList.remove("navbar-hidden");
-    changeButtonColor();
+    if (isRandom){
+      changeButtonColor();
+    }
   };
 
   button.onclick = function () {
-    changeButtonColor();
+    if (isRandom){
+      changeButtonColor();
+    }
     if (Number(button.innerHTML) < 999999999) {
       button.innerHTML = Number(button.innerHTML) + 1;
     }
@@ -87,3 +90,22 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 
+var isRandom = true;
+// to turn on and off the overlay effect
+document.getElementById("changeColorButton").addEventListener("click", function() {
+  isRandom = false;
+  document.getElementById("overlay").style.display = 'flex';
+});
+
+document.getElementById("colorWheel").addEventListener("input", function() {
+  document.getElementById("dynamicColorButton").style.backgroundColor = this.value;
+});
+
+function closeOverlay() {
+  document.getElementById("overlay").style.display = 'none';
+}
+
+function randomize() {
+isRandom = true;
+closeOverlay();
+}

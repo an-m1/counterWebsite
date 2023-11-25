@@ -56,7 +56,10 @@
       <!-- All your page content goes here -->
  
     <h1>Counter</h1>
-    <p>Keep a tally for whatever you'd like!</p>
+    <p>Keep a tally for whatever you'd like!
+      <button id="changeColorButton">Change Color</button>
+    </p>
+
 
     <!-- Main Button -->
     <button id="dynamicColorButton" class="main_button">0</button>
@@ -66,7 +69,16 @@
 </div> -->
 
 <!-- Change button colour overlay -->
-
+<!-- Overlay -->
+<div id="overlay" class="overlay">
+  <!-- Color Wheel Container -->
+  <div class="color-wheel-container">
+      <input type="color" id="colorWheel">
+      <div><button id = rand-btn onclick="randomize()">Random Colour</button></div>
+      <div><button id = close-btn onclick="closeOverlay()">Close</button></div>
+      
+  </div>
+</div>
 
 
 

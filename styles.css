@@ -1,20 +1,24 @@
 /* Gradiant colour background */
 body {
   position: relative;
-  height: 3000px; /* Used to enable scrolling */
+  height: 3000px;
+  /* Used to enable scrolling */
   transition: background-color 0.5s ease;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .content-wrapper {
   position: relative;
-  z-index: 1; /* Ensures content is above the pseudo-elements */
+  z-index: 1;
+  /* Ensures content is above the pseudo-elements */
   /* Add any additional styles needed for your content layout */
 }
 
-body::before, body::after {
-  content: '';
+body::before,
+body::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -29,21 +33,27 @@ body::before, body::after {
 }
 
 body::before {
-    background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
-    opacity: 1;
+  background-image: linear-gradient(43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%);
+  opacity: 1;
 }
 
 body::after {
-    background-image: linear-gradient(358.4deg,  rgba(249,151,119,1) -2.1%, rgba(98,58,162,1) 90% ); /* Dark mode gradient */
-    opacity: 0;
+  background-image: linear-gradient(358.4deg,
+      rgba(249, 151, 119, 1) -2.1%,
+      rgba(98, 58, 162, 1) 90%);
+  /* Dark mode gradient */
+  opacity: 0;
 }
 
 body.dark-mode::before {
-    opacity: 0;
+  opacity: 0;
 }
 
 body.dark-mode::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Add a black background color to the top navigation */
@@ -52,9 +62,12 @@ body.dark-mode::after {
   background-color: transparent;
   overflow: hidden;
   position: relative;
-  z-index: 1000;/* A high value to ensure it's above other elements */
-  transition: opacity 0.5s ease; /* Smooth transition for the opacity */
-  opacity: 1; /* Full visibility initially */
+  z-index: 1000;
+  /* A high value to ensure it's above other elements */
+  transition: opacity 0.5s ease;
+  /* Smooth transition for the opacity */
+  opacity: 1;
+  /* Full visibility initially */
 }
 
 /* Style the links inside the navigation bar */
@@ -82,8 +95,10 @@ body.dark-mode::after {
 }
 
 .navbar-hidden {
-  opacity: 0; /* Fully transparent */
-  pointer-events: none; /* Disable interactions when navbar is invisible */
+  opacity: 0;
+  /* Fully transparent */
+  pointer-events: none;
+  /* Disable interactions when navbar is invisible */
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -123,3 +138,76 @@ body.dark-mode::after {
 }
 
 /* overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.color-wheel-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#close-btn {
+  background-color: #666;
+  color: rgb(255, 255, 255);
+  /* White text */
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* Style for the close button on hover */
+#close-btn:hover {
+  background-color: #3c3c3c;
+}
+
+#rand-btn {
+  background-image: linear-gradient(to right,
+      #ff512f 0%,
+      #f09819 51%,
+      #ff512f 100%);
+  margin: 4px 2px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+#rand-btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: white;
+  text-decoration: none;
+}
+
+/* Style for the color input */
+#colorWheel {
+  background-color: #fff; /* White background */
+  border: 2px solid #ddd; /* Light grey border */
+  border-radius: 4px;
+  padding: 3px;
+  margin: 10px 0;
+  cursor: pointer;
+}
