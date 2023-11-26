@@ -207,7 +207,7 @@ body.dark-mode::after {
   background-color: #fff; /* White background */
   border: 2px solid #ddd; /* Light grey border */
   border-radius: 4px;
-  padding: 3px;
+  padding: 2px;
   margin: 10px 0;
   cursor: pointer;
   width: 25px;
@@ -218,5 +218,48 @@ body.dark-mode::after {
   background-color: #cecece; /* White background */
 }
 
+ /* Tooltip container */
+ .tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 0.9;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 12px;
+}
 
 

@@ -31,7 +31,7 @@
       <a href="#about"><i class="fa fa-fw fa-user"></i> About</a>
 
       <!-- Rounded switch -->
-      <label id = darkmode class="switch">
+      <label id="darkmode" class="switch">
         <input type="checkbox" />
         <span class="slider round">
           <i class="gg-moon"></i>
@@ -56,48 +56,70 @@
   <body>
     <div class="content-wrapper">
       <!-- All your page content goes here -->
- 
-    <h1>Counter</h1>
-    <p>Keep a tally for whatever you'd like!
-      <button id="changeColorButton">Change Color</button>
-    </p>
 
+      <h1>Counter</h1>
+      
+      <div class="tooltip-container">
+      <p>
+        Keep a tally for whatever you'd like!
+        <button id="changeColorButton">Change Colour</button>
+      </p>
+      <span class="tooltip-text">Click Me to Customize Colour</span>
+          </div>
 
-    <!-- Main Button -->
-    <button id="dynamicColorButton" class="main_button">0</button>
-    <!-- <div>
+      <!-- Main Button -->
+      <button id="dynamicColorButton" class="main_button">0</button>
+      <!-- <div>
   <button id = minus class="button">-</button>
   <button class="button">+</button>
 </div> -->
 
-<!-- Change button colour overlay -->
-<!-- Overlay -->
-<div id="overlay" class="overlay">
-  <!-- Color Wheel Container -->
-  <div class="color-wheel-container">
-      <input type="color" id="colorWheel">
-      <div class="autocomplete">
-        <input id="colorSearch" type="text" placeholder="Search for a color...">
-        <div id="colorDropdown" class="autocomplete-dropdown"></div>
-    </div>
-      <div><button id = rand-btn onclick="randomize()">Random Colour</button></div>
-      <div><button id = close-btn onclick="closeOverlay()">Close</button></div>
+      <!-- Change button colour overlay -->
+      <!-- Overlay -->
+      <div id="overlay" class="overlay">
+        <!-- Color Wheel Container -->
+        <div class="color-wheel-container">
+          <div class="tooltip-container">
+            <input type="color" id="colorWheel" />
+            <span class="tooltip-text">Click Me for a Colour Wheel!</span>
+          </div>
 
-     
+          <div class="tooltip-container">
+            <div class="autocomplete">
+              <input
+                id="colorSearch"
+                type="text"
+                placeholder="Search for a colour..."
+              />
+              <div id="colorDropdown" class="autocomplete-dropdown"></div>
+            </div>
+            <span class="tooltip-text">Enter a Colour!</span>
+          </div>
 
-  </div>
-</div>
+          <div>
+          <div class="tooltip-container">
+          <div>
+            <button id="rand-btn" onclick="randomize()">Random Colour</button>
+          </div>
+          <span class="tooltip-text">Random Colours!!</span>
+        </div>
+      </div>
 
+          <div>
+            <button id="close-btn" onclick="closeOverlay()">Close</button>
+          </div>
+        </div>
+      </div>
 
-<!-- button to go to top of page -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <!-- button to go to top of page -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-    <!-- linking html file to script.js -->
-    <script src="script.js"></script>
-    <!-- linking html file to darkmode.js -->
-    <script src="darkmode.js"></script>
-    <!-- linking html file to autocomplete.js -->
-    <script src="autocomplete.js"></script>
+      <!-- linking html file to script.js -->
+      <script src="script.js"></script>
+      <!-- linking html file to darkmode.js -->
+      <script src="darkmode.js"></script>
+      <!-- linking html file to autocomplete.js -->
+      <script src="autocomplete.js"></script>
     </div>
   </body>
 </html>
