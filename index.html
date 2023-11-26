@@ -58,22 +58,19 @@
       <!-- All your page content goes here -->
 
       <h1>Counter</h1>
-      
+
       <div class="tooltip-container">
-      <p>
-        Keep a tally for whatever you'd like!
-        <button id="changeColorButton">Change Colour</button>
-      </p>
-      <span class="tooltip-text">Click Me to Customize Colour</span>
-          </div>
+        <p>
+          Keep a tally for whatever you'd like!
+          <button id="changeColorButton">Change Colour</button>
+        </p>
+        <span class="tooltip-text">Click Me to Customize Colour</span>
+      </div>
 
       <!-- Main Button -->
       <button id="dynamicColorButton" class="main_button">0</button>
-      <!-- <div>
-  <button id = minus class="button">-</button>
-  <button class="button">+</button>
-</div> -->
-
+      
+      
       <!-- Change button colour overlay -->
       <!-- Overlay -->
       <div id="overlay" class="overlay">
@@ -97,13 +94,15 @@
           </div>
 
           <div>
-          <div class="tooltip-container">
-          <div>
-            <button id="rand-btn" onclick="randomize()">Random Colour</button>
+            <div class="tooltip-container">
+              <div>
+                <button id="rand-btn" onclick="randomize()">
+                  Random Colour
+                </button>
+              </div>
+              <span class="tooltip-text">Random Colours!!</span>
+            </div>
           </div>
-          <span class="tooltip-text">Random Colours!!</span>
-        </div>
-      </div>
 
           <div>
             <button id="close-btn" onclick="closeOverlay()">Close</button>

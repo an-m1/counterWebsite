@@ -29,6 +29,7 @@
     border-top: none;
     border-radius: 0 0 4px 4px;
     display: none;
+    z-index: 1;
 }
 
 .autocomplete-dropdown div {
