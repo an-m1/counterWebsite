@@ -210,17 +210,13 @@ body.dark-mode::after {
   padding: 3px;
   margin: 10px 0;
   cursor: pointer;
+  width: 25px;
+  height: 28px;
 }
 
-/* Search box */
-input[type=text] {
-  width: 130px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+#colorWheel:hover {
+  background-color: #cecece; /* White background */
 }
 
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-  width: 100%;
-}
+
 

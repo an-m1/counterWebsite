@@ -76,9 +76,15 @@
   <!-- Color Wheel Container -->
   <div class="color-wheel-container">
       <input type="color" id="colorWheel">
-      <input type="text" id="colorSearch" name="search" placeholder="🔍Search.."> 
+      <div class="autocomplete">
+        <input id="colorSearch" type="text" placeholder="Search for a color...">
+        <div id="colorDropdown" class="autocomplete-dropdown"></div>
+    </div>
       <div><button id = rand-btn onclick="randomize()">Random Colour</button></div>
       <div><button id = close-btn onclick="closeOverlay()">Close</button></div>
+
+     
+
   </div>
 </div>
 

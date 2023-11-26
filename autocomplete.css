@@ -1,0 +1,45 @@
+/* Styles for the autocomplete dropdown */
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+/* Search box */
+#colorSearch {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  display: flexbox;
+}
+/* When the input field gets focus, change its width to 100% */
+#colorSearch:focus {
+    width: 130px;
+    display: block;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    display: none;
+}
+
+.autocomplete-dropdown div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.autocomplete-dropdown div:hover {
+    background-color: #a7a5a5;
+}
