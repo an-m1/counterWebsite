@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var button = document.getElementById("dynamicColorButton");
   var navbar = document.getElementById("myTopnav");
 
+  var plusBtn = document.getElementById("increaseButton");
+  var minusBtn = document.getElementById("decreaseButton");
+  var resetBtn = document.getElementById("resetButton");
+
   function getRandomColor() {
     var letters = "0123456789ABCDEF";
     var color = "#";
@@ -47,6 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   button.onmouseover = function () {
     navbar.classList.add("navbar-hidden");
+
+    plusBtn.classList.add("control_button-hidden");
+    minusBtn.classList.add("control_button-hidden");
+    resetBtn.classList.add("control_button-hidden");
+
     if (isRandom) {
       changeButtonColor();
     }
@@ -54,6 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   button.onmouseleave = function () {
     navbar.classList.remove("navbar-hidden");
+
+    plusBtn.classList.remove("control_button-hidden");
+    minusBtn.classList.remove("control_button-hidden");
+    resetBtn.classList.remove("control_button-hidden");
+
     if (isRandom) {
       changeButtonColor();
     }

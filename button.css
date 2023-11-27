@@ -3,10 +3,7 @@
   position: absolute; /* Use absolute positioning */
   top: 300%; /* Position the top edge of the button at the middle of the screen */
   left: 50%; /* Position the left edge of the button at the middle of the screen */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Shift the button back by half its own width and height to center it */
+  transform: translate(-50%, -50%); /* Shift the button back by half its own width and height to center it */
   width: 50vw; /* Set width relative to the viewport width */
   height: 50vw; /* Set height equal to width for a circular shape */
   border-radius: 50%; /* Make the corners fully rounded */
@@ -19,7 +16,7 @@
   box-shadow: 0 9px #999;
   font-size: 50px; /* Adjust font size as needed */
   display: flex; /* Enable Flexbox */
-  align-items: center; /* Center text vertically */
+  align-items: center; /*Center text vertically*/
   justify-content: center; /* Center text horizontally */
   transition: transform 0.2s; /* Animation for smooth scaling */
   z-index: 999; /* A high value to ensure it's above other elements, but not infront of navbar (navbar zindex is 1000) */
@@ -34,8 +31,118 @@
   transform: translate(-50%, -50%) translateY(4px); /* Maintain centering and add translateY for active state */
 }
 
-/* For +/- buttons */
+/* For +/- control buttons */
+.control_button {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  /* border-radius: 50%; */
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  /* background-color: #007bff; */
+  border: none;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  box-shadow: 0 7px #787878;
 
+  /* for when hidden */
+  transition: opacity 0.5s ease;/* Smooth transition for the opacity */
+  opacity: 1;/* Full visibility initially */
+
+  /* background-image: linear-gradient(to right, #C04848 0%, #480048  51%, #C04848  100%); */
+  background-image: linear-gradient(to right, #EC6F66 0%, #F3A183  51%, #EC6F66  100%);
+  margin: 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+        
+
+
+#increaseButton {
+  top: 600%; /* Adjusted for better positioning */
+  left: 40%; /* Adjusted for better positioning */
+  transform: translate(-50%, -50%);
+  margin-right: 10px;
+}
+
+#decreaseButton {
+  top: 600%; /* Adjusted for better positioning */
+  left: 60%; /* Adjusted for better positioning */
+  transform: translate(-50%, -50%);
+  margin-left: 10px;
+}
+
+#resetButton {
+  width: auto;
+  height: auto;
+  top: 665%; /* Adjusted for better positioning */
+  left: 50%; /* Adjusted for better positioning */
+  padding: 15px 45px;
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px; /* Rounded corners */
+}
+
+
+.control_button:hover {
+  /* background-color: #0054ad; */
+  transform: translate(-50%, -50%) scale(1.5);
+
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.control_button:active {
+  box-shadow: 0 5px #535353;
+  background-color: rgb(142, 142, 142);
+  transform: translate(-50%, -50%) translateY(4px);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 400px) {
+  .main_button {
+    margin-bottom: 0%;
+  }
+
+  .control_button {
+    width: 75px; /* Smaller size for smaller screens */
+    height: 75px; /* Smaller size for smaller screens */
+    font-size: 30px; /* Smaller font size for smaller screens */
+  }
+
+  #increaseButton {
+    top: 425%; /* Adjusted for smaller screens */
+    left: 30%; /* Adjusted for smaller screens */
+  }
+
+  #decreaseButton {
+    top: 425%; /* Adjusted for smaller screens */
+    left: 70%; /* Adjusted for smaller screens */
+  }
+
+  #resetButton {
+    top: 485%; /* Adjusted for smaller screens */
+    
+  }
+}
+
+.control_button-hidden {
+  opacity: 0;
+  /* Fully transparent */
+  pointer-events: none;
+  /* Disable interactions when btns are invisible */
+}
 
 /* For the 'Go to Top' button */
 #myBtn {
