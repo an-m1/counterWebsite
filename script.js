@@ -82,6 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  //For the plus, minus, and reset buttons. 
+  plusBtn.onclick = function () {
+    if (Number(button.innerHTML) < 999999999) {
+      button.innerHTML = Number(button.innerHTML) + 1;
+    }
+  }
+  minusBtn.onclick = function () {
+    if (Number(button.innerHTML) > 0) {
+      button.innerHTML = Number(button.innerHTML) - 1;
+    }
+  }
+  resetBtn.onclick = function () {
+      button.innerHTML = 0;
+  }
+
 });
 
 //For the 'go to top' button
@@ -129,3 +144,6 @@ function randomize() {
   isRandom = true;
   closeOverlay();
 }
+
+
+

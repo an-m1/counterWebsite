@@ -20,6 +20,8 @@
 /* Similar concept as the code above, but the transition between light and dark modes looks choppy. Transitioning a background-image smoothly in CSS is more complex than transitioning colors, as CSS doesn't support transitions between gradients or images directly. */
 document.addEventListener("DOMContentLoaded", function () {
     var checkbox = document.querySelector('#darkmode input[type="checkbox"]');
+    var button = document.getElementById('rand-btn');
+
 
     // Check the saved state from local storage and update the checkbox and body class
     var darkMode = localStorage.getItem('darkMode');
@@ -36,7 +38,21 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.remove('dark-mode');
             localStorage.setItem('darkMode', null); // Remove state from local storage
         }
+
+            if (this.checked) {
+        // Apply the gradient background when the toggle switch is checked
+        button.style.backgroundImage = 'linear-gradient(to right, #5f2c82 0%, #49a09d 51%, #5f2c82 100%)';
+    } else {
+        // Revert to the original background when the toggle switch is unchecked
+        button.style.backgroundImage = 'linear-gradient(to right, #ff512f 0%, #f09819 51%, #ff512f 100%)';
+    }
     });
 });
 
+
+
+// document.getElementById('darkmode').addEventListener('change', function() {
+//     var button = document.getElementById('rand-btn');
+
+// });
 
