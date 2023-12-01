@@ -264,4 +264,76 @@ body.dark-mode::after {
   font-size: 12px;
 }
 
+/* title and colour change prompt */
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+/* Counter Section Styles */
+h1 {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+
+.tooltip-container2 {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  
+}
+
+.tooltip-container2 p {
+  margin: 0;
+  color: #f2f2f2;
+  
+}
+
+.tooltip-container2 button {
+  background-color: #ff512f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tooltip-container2 button:hover {
+  background-color: #f09819;
+}
+
+.tooltip-text2 {
+  visibility: hidden;
+  width: 200px;
+  background-color: #666;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 40%;
+  left: 50%;
+  margin-left: -80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container2:hover .tooltip-text2 {
+  visibility: visible;
+  opacity: 1;
+}
