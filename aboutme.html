@@ -53,74 +53,117 @@
 <div class="context">
     <!-- <h1>About Me</h1> -->
 </div>
-
 <style>
-    body {
+  body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-    }
-    .card-container {
+  }
+  .card-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-    }
-    .profile-card {
-      width: 60%;
-      display: flex;
-      overflow: hidden; /* Ensures the image doesn't spill outside the border */
-      border: 5px solid #e74c3c; /* Red border */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .left-column {
-      width: 50%;
-    }
-    .right-column {
-      width: 50%;
-      background: #fff;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .profile-image {
+      min-height: 100vh;
+      padding: 10px;
+  }
+  .profile-card {
+      max-width: 500px; /* More compact width */
       width: 100%;
-      display: block; /* Removes bottom space under image */
-      height: auto; /* Maintain aspect ratio */
-    }
-    .about-me {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 5px solid #e74c3c;
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.264);
+  }
+  .left-column, .right-column {
+      width: 100%;
+  }
+  .left-column {
+      flex-shrink: 0; /* Prevents image column from shrinking */
+       z-index: 1000;
+  }
+  .right-column {
+    display: flex; /* Flex container */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            text-align: center; /* Center text horizontally */
+            background: #fff;
+            padding: 15px;
+            box-sizing: border-box;
+  }
+  .profile-image {
+      width: 100%;
+      display: block;
+      height: auto;
+     
+  }
+  .about-me {
       margin: 0;
-    }
-    .about-me h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .about-me p {
-      font-size: 16px;
-      line-height: 1.6;
+  }
+  .about-me h1 {
+      font-size: 20px; /* Slightly smaller fixed font size */
+      margin-bottom: 8px;
+  }
+  .about-me p {
+      font-size: 14px; /* Slightly smaller fixed font size */
+      line-height: 1.5;
       margin-top: 0;
-    }
-  </style>
-  </head>
-  <body>
-  
-  <div class="card-container">
-    <div class="profile-card">
-      <div class="left-column">
-        <!-- Replace with your actual image URL -->
-        <img src="https://github.com/an-m1/counterWebsite/blob/main/IMG_0489.jpg?raw=true" alt="Person kayaking" class="profile-image">
-      </div>
-      <div class="right-column">
-        <div class="about-me">
-          <h1>About Me</h1>
-          <!-- Replace text below with your actual text -->
-          <p>Born in Texas, but raised in the beautiful Salt Lake Valley, I've always known the mountains of Utah to be home. After pursuing dual marketing and business degrees in the Great White North of Logan, Utah, I re-settled near downtown Salt Lake City where I can enjoy the best of both worlds: city life and world-class mountain ranges.</p>
-        </div>
-      </div>
-    </div>
+  }
+
+  @media (min-width: 427px) {
+      .profile-card {
+          flex-direction: row; /* Side-by-side on larger screens */
+          max-width: 700px; /* Larger max width for larger screens */
+      }
+      .left-column, .right-column {
+          width: 50%;
+      }
+  }
+</style>
+</head>
+<body>
+
+<div class="card-container">
+<div class="profile-card">
+  <div class="left-column">
+      <img src="https://github.com/an-m1/counterWebsite/blob/main/IMG_0489.jpg?raw=true" alt="Person kayaking" class="profile-image" loading="lazy">
   </div>
+  <div class="right-column">
+      <div class="about-me">
+          <h1>About Me</h1>
+          <p>Hi, I'm Ankit, a Computer Science BSc student at York University. Fascinated by creation since childhood, I've journeyed from crafting things together and assembling programs and websites. My passion for technology has led me to the world of robotics, blending creativity with digital innovation in various competitions.</p>
+      </div>
+  </div>
+</div>
+</div>
+
   
-  
+    <!-- Footer Section -->
+    <footer id = footer class="footer">
+      <p>Project Version 1.0</p>
+
+      <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get the footer element
+        const footer = document.getElementById("footer");
+      
+        // Function to toggle footer visibility
+        function toggleFooterVisibility() {
+          if (window.scrollY > 99) {
+            footer.style.display = "block";
+          } else {
+            footer.style.display = "none";
+          }
+        }
+      
+        // Event listener for window scroll
+        window.addEventListener("scroll", toggleFooterVisibility);
+      });
+      </script>
+
+  </footer>
 
 
 <!-- animated background -->
