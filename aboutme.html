@@ -36,6 +36,15 @@
       </a>
     </div>
 
+    <!-- Connections Tab -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Discord</a>
+      <a href="#">Email</a>
+    </div>
+
     <!-- linking html file to styles.css -->
     <link rel="stylesheet" href="styles.css" />
     <!-- linking html file to styles.css -->
@@ -49,6 +58,8 @@
   </head>
 
   <body>
+
+    <div id="main">
 
 <div class="context">
     <!-- <h1>About Me</h1> -->
@@ -78,6 +89,7 @@
   }
   .left-column, .right-column {
       width: 100%;
+      z-index: 100;
   }
   .left-column {
       flex-shrink: 0; /* Prevents image column from shrinking */
@@ -112,7 +124,7 @@
       margin-top: 0;
   }
 
-  @media (min-width: 427px) {
+  @media (min-width: 750px) {
       .profile-card {
           flex-direction: row; /* Side-by-side on larger screens */
           max-width: 700px; /* Larger max width for larger screens */
@@ -135,6 +147,7 @@
           <h1>About Me</h1>
           <p>Hi, I'm Ankit, a Computer Science BSc student at York University. Fascinated by creation since childhood, I've journeyed from crafting things together and assembling programs and websites. My passion for technology has led me to the world of robotics, blending creativity with digital innovation in various competitions.</p>
       </div>
+      <button id = connectBtn class="connect-button">Connect</button>
   </div>
 </div>
 </div>
@@ -185,6 +198,8 @@
 
 
 
-
+ <!-- linking html file to aboutme.js -->
+ <script src="aboutme.js"></script>
+ </div>
   </body>
 </html>
