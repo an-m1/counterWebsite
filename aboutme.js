@@ -32,3 +32,44 @@ function navShrink() {
     x.className = "topnav";
   }
 }
+
+// popup window
+document.addEventListener('DOMContentLoaded', (event) => {
+  const linkedinBtn = document.getElementById('linkedIn-btn');
+  const githubBtn = document.getElementById('github-btn');
+  const discordBtn = document.getElementById('discord-btn');
+
+  const popup = document.getElementById('popup');
+  const closeBtn = document.querySelector('.popup-close-btn');
+  const okBtn = document.querySelector('.ok-btn');
+
+  linkedinBtn.onclick = function() {
+    popup.style.display = "block";
+    var linkedIn_url = "https://www.linkedin.com/in/ankit-modhera";
+            window.open(linkedIn_url, '_blank');
+  }
+
+  githubBtn.onclick = function() {
+    popup.style.display = "block";
+            window.open("https://github.com/an-m1", '_blank');
+  }
+// discordapp.com/users/689113758068637722
+discordBtn.onclick = function() {
+  popup.style.display = "block";
+          window.open("https://discordapp.com/users/689113758068637722", '_blank');
+}
+
+  closeBtn.onclick = function() {
+    popup.style.display = "none";
+  }
+
+  okBtn.onclick = function() {
+    popup.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  }
+});
