@@ -25,7 +25,9 @@
     />
 
     <div class="topnav" id="myTopnav">
-      <a href="index.html" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="index.html" class="active"
+        ><i class="fa fa-fw fa-home"></i> Home</a
+      >
       <a href="#news"><i class="fa fa-fw fa-search"></i> News</a>
       <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
       <a href="aboutme.html"><i class="fa fa-fw fa-user"></i> About</a>
@@ -61,20 +63,23 @@
         <h1>Counter</h1>
         <div class="tooltip-container2">
           <p>
-            Keep a tally for whatever you'd like!
+            You can also change colours!
             <button id="changeColorButton">Change Colour</button>
           </p>
-          <span class="tooltip-text2">Click Me to Customize Colour</span>
+          <img
+            src="https://github.com/an-m1/counterWebsite/blob/main/clickpointer.gif?raw=true"
+            id="animatedCursor"
+            style="display: none; position: absolute"
+          />
         </div>
       </div>
-      
 
       <!-- Main Button -->
       <button id="dynamicColorButton" class="main_button">0</button>
       <button id="increaseButton" class="control_button">+</button>
       <button id="decreaseButton" class="control_button">-</button>
       <button id="resetButton" class="control_button">Reset</button>
-      
+
       <!-- Change button colour overlay -->
       <!-- Overlay -->
       <div id="overlay" class="overlay">

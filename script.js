@@ -82,21 +82,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  //For the plus, minus, and reset buttons. 
+  //For the plus, minus, and reset buttons.
   plusBtn.onclick = function () {
     if (Number(button.innerHTML) < 999999999) {
       button.innerHTML = Number(button.innerHTML) + 1;
     }
-  }
+  };
   minusBtn.onclick = function () {
     if (Number(button.innerHTML) > 0) {
       button.innerHTML = Number(button.innerHTML) - 1;
     }
-  }
+  };
   resetBtn.onclick = function () {
-      button.innerHTML = 0;
-  }
-
+    button.innerHTML = 0;
+  };
 });
 
 //For the 'go to top' button
@@ -145,5 +144,22 @@ function randomize() {
   closeOverlay();
 }
 
+// tooltip icon
+var myButton = document.getElementById("changeColorButton");
+var animatedCursor = document.getElementById("animatedCursor");
 
+myButton.addEventListener("mouseover", function () {
+  animatedCursor.style.display = "block";
+});
 
+myButton.addEventListener("mouseout", function () {
+  animatedCursor.style.display = "none";
+});
+
+myButton.addEventListener("mousemove", function (e) {
+  var xOffset = -40; // Horizontal offset from the cursor, adjust as needed
+  var yOffset = -50; // Vertical offset from the cursor, adjust as needed
+
+  animatedCursor.style.left = e.pageX + xOffset + "px";
+  animatedCursor.style.top = e.pageY + yOffset + "px";
+});
