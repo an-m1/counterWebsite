@@ -72,6 +72,7 @@ input:checked + .slider:before {
 }
 
 .gg-moon {
+  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 7px; /* Adjust this value to center the icon in the white circle */
@@ -91,7 +92,7 @@ input:checked + .slider:before {
   border: 2px solid transparent;
   box-shadow: 0 0 0 2px;
   top: 8px;
-  left: 2px;
+  left: 2px
 }
 
 input:checked + .slider .gg-moon {
