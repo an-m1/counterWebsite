@@ -298,7 +298,7 @@ h1 {
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 700px;
+  margin-top: 800px; /* to change where the colour change block is vertically */
 }
 
 /* Media Query for smaller screens */
@@ -341,4 +341,65 @@ h1 {
 .tooltip-container2:hover .tooltip-text2 {
   visibility: visible;
   opacity: 1;
+}
+
+/* column cards */
+.header {
+  text-align: center; /* Center the heading */
+  color: #fff; /* White text */
+  /* background-color: #2c3e50; Dark background color */
+  padding: 20px 0; /* Some padding at the top and bottom */
+  margin-bottom: 30px; /* Space below the header */
+}
+
+.header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* Remove default margin */
+  font-size: 2em; /* Increase font size */
+  /* Additional styling to match your specific needs */
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Float columns side by side */
+.column {
+  float: left;
+  width: 33.33%; /* Adjust width for 3 columns */
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Card effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #dd95b3; /* Card background color */
+  border-radius: 10px; /* Rounded corners for cards */
+  margin-bottom: 16px; /* Space between cards */
+}
+
+.card-icon {
+  max-width: 100px; /* Limit the size of the icon */
+  margin-bottom: 15px; /* Space below the icon */
+  /* Other styles as needed */
+}
+
+/* Responsive columns - stack columns vertically on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
