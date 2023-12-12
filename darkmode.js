@@ -21,6 +21,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var checkbox = document.querySelector('#darkmode input[type="checkbox"]');
   var button = document.getElementById("rand-btn");
+  var changeColor_button = document.getElementById('changeColorButton');
 
   // since .card is a class and not an id, we can do the same thing a little differently as follows.
   var cards = document.querySelectorAll(".card");
@@ -44,10 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isChecked) {
+      changeColor_button.style.backgroundColor = "#7747B5";
       // Apply the gradient background when the toggle switch is checked
       button.style.backgroundImage =
         "linear-gradient(to right, #5f2c82 0%, #49a09d 51%, #5f2c82 100%)";
     } else {
+      changeColor_button.style.backgroundColor = "#ff512f";
       // Revert to the original background when the toggle switch is unchecked
       button.style.backgroundImage =
         "linear-gradient(to right, #ff512f 0%, #f09819 51%, #ff512f 100%)";
