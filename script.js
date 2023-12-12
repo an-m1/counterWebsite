@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var minusBtn = document.getElementById("decreaseButton");
   var resetBtn = document.getElementById("resetButton");
 
+  var colourContainer = document.getElementById("centerColourContainer");
+
   function getRandomColor() {
     var letters = "0123456789ABCDEF";
     var color = "#";
@@ -56,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
     minusBtn.classList.add("control_button-hidden");
     resetBtn.classList.add("control_button-hidden");
 
+    colourContainer.classList.add("centered-container-hidden");
+
     if (isRandom) {
       changeButtonColor();
     }
@@ -67,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     plusBtn.classList.remove("control_button-hidden");
     minusBtn.classList.remove("control_button-hidden");
     resetBtn.classList.remove("control_button-hidden");
+
+    colourContainer.classList.remove("centered-container-hidden");
 
     if (isRandom) {
       changeButtonColor();

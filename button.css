@@ -63,19 +63,19 @@
 
 
 #increaseButton {
-  top: calc(50vh + 25vw + 60px); /* Position below the main button */
+  top: calc(50vh + 25vw + 75px); /* Position below the main button */
   left: 40vw;
   transform: translate(-50%, -50%);
 }
 
 #decreaseButton {
-  top: calc(50vh + 25vw + 60px); /* Position below the main button */
+  top: calc(50vh + 25vw + 75px); /* Position below the main button */
   left: 60vw;
   transform: translate(-50%, -50%);
 }
 
 #resetButton {
-  top: calc(50vh + 25vw + 60px); /* Position below the main button */
+  top: calc(50vh + 25vw + 85px); /* Position below the main button */
   left: 50vw;
   transform: translate(-50%, -50%);
   padding: 15px 45px;
