@@ -18,25 +18,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <!-- for the darkmode moon icon -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/css.gg@2.0.0/icons/css/moon.css"
-    />
-
     <div class="topnav" id="myTopnav">
       <a href="index.html" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
-      <a href="#news"><i class="fa fa-fw fa-search"></i> News</a>
+      <a href="main.html"><i class="fa fa-fw fa-search"></i> Counter</a>
       <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
       <a href="aboutme.html"><i class="fa fa-fw fa-user"></i> About</a>
 
-      <!-- Rounded switch -->
-      <label id="darkmode" class="switch">
-        <input type="checkbox" />
-        <span class="slider round">
-          <i class="gg-moon"></i>
-        </span>
-      </label>
       <!-- hamburger button implemenation -->
       <a href="javascript:void(0);" class="icon" onclick="navShrink()">
         <i class="fa fa-bars"></i>
@@ -45,128 +32,12 @@
 
     <!-- linking html file to styles.css -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- linking html file to styles.css -->
-    <link rel="stylesheet" href="button.css" />
-    <!-- linking html file to darkmode.css -->
-    <link rel="stylesheet" href="darkmode.css" />
-    <!-- linking html file to autocomplete.css -->
-    <link rel="stylesheet" href="autocomplete.css" />
 
-    <div class="title-and-button-container">
-      <h1>CountCorner</h1>
-      <button>Counter Settings</button>
-    </div>
   </head>
 
   <body>
     <div class="content-wrapper">
       <!-- All your page content goes here -->
-
-      <div id="centerColourContainer" class="centered-container">
-        <div class="tooltip-container2">
-          <p>
-            You can also change colours!
-            <button id="changeColorButton">Change Colour</button>
-          </p>
-          <img
-            src="https://github.com/an-m1/counterWebsite/blob/main/clickpointer.gif?raw=true"
-            id="animatedCursor"
-            style="display: none; position: absolute"
-          />
-        </div>
-      </div>
-
-      <!-- Main Button -->
-      <button id="dynamicColorButton" class="main_button">0</button>
-      <button id="increaseButton" class="control_button">+</button>
-      <button id="decreaseButton" class="control_button">-</button>
-      <button id="resetButton" class="control_button">Reset</button>
-
-      <!-- Change button colour overlay -->
-      <!-- Overlay -->
-      <div id="overlay" class="overlay">
-        <!-- Color Wheel Container -->
-        <div class="color-wheel-container">
-          <div class="tooltip-container">
-            <input type="color" id="colorWheel" />
-            <span class="tooltip-text">Click Me for a Colour Wheel!</span>
-          </div>
-
-          <div class="tooltip-container">
-            <div class="autocomplete">
-              <input
-                id="colorSearch"
-                type="text"
-                placeholder="Search for a colour..."
-              />
-              <div id="colorDropdown" class="autocomplete-dropdown"></div>
-            </div>
-            <span class="tooltip-text">Enter a Colour!</span>
-          </div>
-
-          <div>
-            <div class="tooltip-container">
-              <div>
-                <button id="rand-btn" onclick="randomize()">
-                  Random Colour
-                </button>
-              </div>
-              <span class="tooltip-text">Random Colours!!</span>
-            </div>
-          </div>
-
-          <div>
-            <button id="close-btn" onclick="closeOverlay()">Close</button>
-          </div>
-        </div>
-      </div>
-
-<!-- column cards -->
-<div class="header">
-  <h1>Tally Count Can Be Used For...</h1>
-</div>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/ticket.gif?raw=true" alt="Event Icon" class="card-icon">
-      <p>Event people counting</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <img src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/sales.gif?raw=true" alt="Sales Icon" class="card-icon">
-      <p>Sales call tracking</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <img src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/football.gif?raw=true" alt="Football Icon" class="card-icon">
-      <p>Score counter clicker</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <img src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/retail.gif?raw=true" alt="Retail Icon" class="card-icon">
-      <p>Retail foot traffic</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <img src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/microscope.gif?raw=true" alt="Research Icon" class="card-icon">
-      <p>Research</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <img src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/gaming.gif?raw=true" alt="Game Icon" class="card-icon">
-      <p>Game tracking</p>
-    </div>
-  </div>
-  <div class="header">
-    <h2>And So Much More!</h2>
-  </div>
-</div>
-
 
 
 
@@ -175,10 +46,6 @@
 
       <!-- linking html file to script.js -->
       <script src="script.js"></script>
-      <!-- linking html file to darkmode.js -->
-      <script src="darkmode.js"></script>
-      <!-- linking html file to autocomplete.js -->
-      <script src="autocomplete.js"></script>
     </div>
   </body>
 </html>
