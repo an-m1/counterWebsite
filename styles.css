@@ -9,7 +9,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
+.content {
+  max-width: 500px;
+  margin: auto;
+}
 .content-wrapper {
   position: relative;
   z-index: 1;
