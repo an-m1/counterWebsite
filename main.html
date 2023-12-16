@@ -167,11 +167,72 @@
   </div>
 </div>
 
-
-
-
       <!-- button to go to top of page -->
       <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+      <footer class="footer">
+        <!-- for social media icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+          /* CSS for footer */
+          .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 40px 80px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Card effect */
+          }
+        
+          .footer .copy {
+            color: #fff;
+          }
+        
+          .bottom-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0;
+          }
+        
+          .bottom-links .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+          }
+        
+          .bottom-links .links span {
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 10px 0;
+          }
+        
+          .bottom-links .links a {
+            text-decoration: none;
+            color: #c0bebe;
+            padding: 10px 20px;
+          }
+        </style>
+      
+        <div class="copy">&copy; 2023 Ankit Modhera</div>
+        <div class="bottom-links">
+          <div class="links">
+            <span>More Info</span>
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About</a>
+            <a href="main.html">Counter</a>
+          </div>
+          <div class="links">
+            <span>Social Links</span>
+            <a href="https://www.facebook.com/profile.php?id=100070147362220" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ankitmodhera/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/ankitmodhera/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </footer>
 
       <!-- linking html file to script.js -->
       <script src="script.js"></script>

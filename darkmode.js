@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // since .card is a class and not an id, we can do the same thing a little differently as follows.
   var cards = document.querySelectorAll(".card");
+  var foot = document.querySelectorAll(".footer");
 
   // Check the saved state from local storage and update the checkbox and body class
   var darkMode = localStorage.getItem("darkMode");
@@ -58,15 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach(function (card) {
       if (isChecked) {
-        card.style.backgroundColor = "#8468B4"; //  color when checked
-      } else {
-        card.style.backgroundColor = "#dd95b3"; //  color when unchecked
-      }
+        card.style.backgroundColor = "#8468B4"; // color when checked
+        foot.forEach(function(f) {
+            f.style.backgroundColor = "#D47D70";
+        });
+    } else {
+        card.style.backgroundColor = "#dd95b3"; // color when unchecked
+        foot.forEach(function(f) {
+            f.style.backgroundColor = "#6157C5";
+        });
+    }
     });
   });
 });
-
-// document.getElementById('darkmode').addEventListener('change', function() {
-//     var button = document.getElementById('rand-btn');
-
-// });
