@@ -164,7 +164,7 @@ myButton.addEventListener("mouseout", function () {
 
 myButton.addEventListener("mousemove", function (e) {
   var xOffset = -40; // Horizontal offset from the cursor, adjust as needed
-  var yOffset = -50; // Vertical offset from the cursor, adjust as needed
+  var yOffset = -150; // Vertical offset from the cursor, adjust as needed
 
   animatedCursor.style.left = e.pageX + xOffset + "px";
   animatedCursor.style.top = e.pageY + yOffset + "px";
