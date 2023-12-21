@@ -19,7 +19,9 @@
     />
 
     <div class="topnav" id="myTopnav">
-      <a href="index.html" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="index.html" class="active"
+        ><i class="fa fa-fw fa-home"></i> Home</a
+      >
       <a href="main.html"><i class="fa fa-fw fa-search"></i> Counter</a>
       <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
       <a href="aboutme.html"><i class="fa fa-fw fa-user"></i> About</a>
@@ -33,20 +35,180 @@
     <!-- linking html file to styles.css -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="button.css" />
-
+    <link rel="stylesheet" href="home_styles.css" />
   </head>
 
   <body>
     <div class="content-wrapper">
       <!-- All your page content goes here -->
+      <div class="slideshow-container">
+        <div class="slide active">
+          <img src="homepage_slideshow/CountCorner.png" />
+        </div>
 
+        <div class="slide">
+          <img src="homepage_slideshow/CountCorner1.png" />
+        </div>
 
+        <div class="dot-container">
+          <span class="dot active-dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
 
-      <!-- button to go to top of page -->
-      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <button class="start-button">Start Counting...</button>
 
+        <!-- column cards -->
+        <div class="header">
+          <h1>Tally Count Can Be Used For...</h1>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/ticket.gif?raw=true"
+                alt="Event Icon"
+                class="card-icon"
+              />
+              <p>Event people counting</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/sales.gif?raw=true"
+                alt="Sales Icon"
+                class="card-icon"
+              />
+              <p>Sales call tracking</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/football.gif?raw=true"
+                alt="Football Icon"
+                class="card-icon"
+              />
+              <p>Score counter clicker</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/retail.gif?raw=true"
+                alt="Retail Icon"
+                class="card-icon"
+              />
+              <p>Retail foot traffic</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/microscope.gif?raw=true"
+                alt="Research Icon"
+                class="card-icon"
+              />
+              <p>Research</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://github.com/an-m1/counterWebsite/blob/main/homepage_column_cards/gaming.gif?raw=true"
+                alt="Game Icon"
+                class="card-icon"
+              />
+              <p>Game tracking</p>
+            </div>
+          </div>
+          <div class="header">
+            <h2>And So Much More!</h2>
+          </div>
+        </div>
+
+        <!-- button to go to top of page -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          Top
+        </button>
+
+        <footer class="footer">
+          <!-- for social media icons -->
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          />
+          <style>
+            /* CSS for footer */
+            .footer {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background-color: rgba(0, 0, 0, 0.1);
+              padding: 40px 80px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Card effect */
+            }
+
+            .footer .copy {
+              color: #fff;
+            }
+
+            .bottom-links {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              padding: 40px 0;
+            }
+
+            .bottom-links .links {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding: 0 40px;
+            }
+
+            .bottom-links .links span {
+              font-size: 20px;
+              color: #fff;
+              text-transform: uppercase;
+              margin: 10px 0;
+            }
+
+            .bottom-links .links a {
+              text-decoration: none;
+              color: #c0bebe;
+              padding: 10px 20px;
+            }
+          </style>
+
+          <div class="copy">&copy; 2023 Ankit Modhera</div>
+          <div class="bottom-links">
+            <div class="links">
+              <span>More Info</span>
+              <a href="index.html">Home</a>
+              <a href="aboutme.html">About</a>
+              <a href="main.html">Counter</a>
+            </div>
+            <div class="links">
+              <span>Social Links</span>
+              <a
+                href="https://www.facebook.com/profile.php?id=100070147362220"
+                target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/ankitmodhera/" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/ankitmodhera/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </footer>
+      </div>
       <!-- linking html file to script.js -->
-      <script src="script.js"></script>
+      <script src="home_script.js"></script>
     </div>
   </body>
 </html>
