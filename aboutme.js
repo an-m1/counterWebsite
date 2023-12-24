@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const linkedinBtn = document.getElementById('linkedIn-btn');
   const githubBtn = document.getElementById('github-btn');
   const discordBtn = document.getElementById('discord-btn');
+  const indeedBtn = document.getElementById('indeed-btn');
 
   const popup = document.getElementById('popup');
   const closeBtn = document.querySelector('.popup-close-btn');
@@ -59,6 +60,10 @@ discordBtn.onclick = function() {
           window.open("https://discordapp.com/users/689113758068637722", '_blank');
 }
 
+indeedBtn.onclick = function() {
+  popup.style.display = "block";
+          window.open("https://profile.indeed.com/p/ankitm-wskg5mz", '_blank');
+}
   closeBtn.onclick = function() {
     popup.style.display = "none";
   }
