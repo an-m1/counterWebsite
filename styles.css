@@ -102,6 +102,11 @@ body.dark-mode::after {
   color: white;
 }
 
+.topnav a.active:hover {
+  background-color: #acaaaa;
+  color: black;
+}
+
 .navbar-hidden {
   opacity: 0;
   /* Fully transparent */
