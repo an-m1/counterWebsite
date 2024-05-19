@@ -1,4 +1,4 @@
-CountCorner
+## CountCorner
 
 CountCorner is a versatile counting application designed for multiple use cases including event management, sales tracking, and sports scorekeeping. The web application offers a user-friendly interface with responsive design, making it accessible on a variety of devices.
 
@@ -9,7 +9,7 @@ CountCorner is a versatile counting application designed for multiple use cases 
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Contributors](#contributors)
-- [To Do List](#ToDo)
+- [To Do](#ToDo)
 
 ## Installation
 
